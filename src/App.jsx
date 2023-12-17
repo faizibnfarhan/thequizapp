@@ -286,15 +286,19 @@ function App() {
               <h2 className="earned"> You earned: {earned}</h2>
               <button className="play-again" onClick={playAgain}>Play again</button>
 
-            </div> : (
-               <><div className="top">
-            <div className="timer">
-              <Timer setStop={setStop} questionNumber={questionNumber}/>
-            </div>
-          </div><div className="bottom">
-              <Trivia data={data} setStop={setStop} setQuestionNumber={setQuestionNumber} questionNumber={questionNumber} />
-            </div></>
-            )}
+            </div> 
+            :
+              <>
+                <div className="top">
+                  <div className="timer">
+                    <Timer setStop={setStop} questionNumber={questionNumber}/>
+                  </div>
+                </div>
+                <div className="bottom">
+                  <Trivia data={data} setStop={setStop} setQuestionNumber={setQuestionNumber} questionNumber={questionNumber} />
+                </div>
+              </>
+            }
         </div>
         <div className="pyramid ">
           <ul className="moneyList">
